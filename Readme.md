@@ -1,6 +1,6 @@
 # wanted-pre-onboarding-challenge-fe-2
 
-## [🔗 사전과제 링크](링크)
+## [🔗 사전과제 링크](https://ziya312.github.io/wanted-pre-onboarding-challenge-fe-2/)
 
 ## 👋 소개
 
