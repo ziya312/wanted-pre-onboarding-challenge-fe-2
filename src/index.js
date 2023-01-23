@@ -1,27 +1,15 @@
-// /**
-//  * @param {string} name
-//  * @param {number} age
-//  * @returns {string} name + age
-//  */
-// function hello(name, age) {
-//   return `name : ${name} , age : ${age}`;
-// }
-
-// hello("picpal", 10);
-
 /**
- * @constructor
  * @typedef {object} todoData - Todo 데이터
- * @param {number} id - 일정 id
- * @param {string} content - 일정 내용
- * @param {string} category - 카테고리
- * @param {boolean} isDone - 완료 여부
- * @param {string[]} [tags] - 태그들
+ * @property  {number} id - 일정 id
+ * @property  {string} content - 일정 내용
+ * @property  {string} category - 카테고리
+ * @property  {boolean} isDone - 완료 여부
+ * @property  {string[]} [tags] - 태그들
  */
 
 /**
  *
- * @type {todoData[]}
+ * @type {todoData}
  */
 
 const todoData = {};
