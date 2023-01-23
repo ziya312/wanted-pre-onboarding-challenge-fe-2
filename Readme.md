@@ -11,6 +11,54 @@ JsDoc이라는 문서 생성기를 처음 사용해보기도하고 TypeScript에
 
 JSDoc은 자바스크립트 API 문서 생성기다. 자바스크립트 소스코드에 JSDoc 형식의 주석을 추가하면 API를 설명하는 HTML 문서를 생성할 수 있다. JSDoc 주석은 /\*_ ... _/ 사이에 기술한다. 일반적인 자바스크립트 주석 /_ ... _/은 무시된다.
 
+## JSDoc 시작하기
+### 터미널에 아래 명령어를 수행한다.
+```
+npm init -y
+```
+
+```
+npm i -D jsdoc
+```
+### 루트 디렉토리에 jsdoc.json 파일 생성
+```json
+{
+  "plugins": ["plugins/markdown"],
+  "source": {
+    "include": ["src/"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)_"
+  },
+  "sourceType": "module",
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": true
+  }
+}
+```
+
+### package.json 파일 수정
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "jsdoc -c jsdoc.json"
+  },
+```
+
+### 루트 디렉터리에 src/index.js 파일 생성 및 doc 명령어 수행
+```
+npm run doc
+```
+
 ## 📝 Requirements
 
 ### 필수 요구사항
